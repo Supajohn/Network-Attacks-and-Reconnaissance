@@ -27,7 +27,8 @@
 - Pysyin samalla Spartasdr.gr sivuilla ja muutin modulaatiota FM:ksi. Puheesta tuli epäselvää mutta esim. CW modulaatiosta sai puheesta hieman selvää mutta tuntui kuin puhuisi puhelinkopista.
 - Seuraavasta kohdasta 3715 taajuudelta löytyi kanava josta kuului hyvin selkeästi ja oli eri henkilön puhetta.
   
-<img width="1046" height="313" alt="{9DF170F3-6953-49D5-8123-35B5F70F1792}" src="https://github.com/user-attachments/assets/340345e0-5f67-4a65-bfab-83b90a3982bc" />
+<img width="1018" height="314" alt="{066CC26B-E05D-4CCF-9AF6-9B50AF76BF9B}" src="https://github.com/user-attachments/assets/323323a5-9176-4ab6-a353-1004d5f73314" />
+(Kuva muunnettu kun vahingossa laitoin väärän screenshotin)
 
 ## c) ADS-B
 
