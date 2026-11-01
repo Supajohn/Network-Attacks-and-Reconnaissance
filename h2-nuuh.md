@@ -11,6 +11,9 @@
 ## a) Linux
 - Hops löytyy Debian 13 Trixie.
 
+<img width="768" height="265" alt="image" src="https://github.com/user-attachments/assets/e3407d7e-0926-422c-b3d9-5fa4242c7741" />
+
+
 ## b) Ei voi kalastaa
 
 - Virtuaalikoneesta pystyy helposti katkaisemaan verkon yhteyden napautuksella.
