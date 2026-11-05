@@ -76,10 +76,10 @@ pipx install urh
 
 ## Lähteet
 
-Claude AI-tekoäly
-https://telcochisel.sourceforge.io/tools/urh/ / luettu 4.11.2026
-https://github.com/merbanan/rtl_433  / luettu 5.11.2026 
-https://github.com/jopohl/urh / luettu 5.11.2026 
-https://www.youtube.com/watch?v=MTzFFOBYyZA / luettu 5.11.2026 
-https://www.youtube.com/watch?v=sbqMqb6FVMY&t=199s / luettu 5.11.2026
-terokarvinen.com / luettu 5.11.2026
+- Claude AI-tekoäly
+- https://telcochisel.sourceforge.io/tools/urh/ / luettu 4.11.2026
+- https://github.com/merbanan/rtl_433  / luettu 5.11.2026 
+- https://github.com/jopohl/urh / luettu 5.11.2026 
+- https://www.youtube.com/watch?v=MTzFFOBYyZA / luettu 5.11.2026 
+- https://www.youtube.com/watch?v=sbqMqb6FVMY&t=199s / luettu 5.11.2026
+- terokarvinen.com / luettu 5.11.2026
