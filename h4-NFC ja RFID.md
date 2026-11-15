@@ -52,8 +52,8 @@ Samalla kun tutkittiin asiaa lisää, niin tuli ilmi, että laitteisto takaportt
 
 # Lähteet
 
-RFID takaportin artikkeli - https://www.securityweek.com/major-backdoor-in-millions-of-rfid-cards-allows-instant-cloning/
-Backdoor in RFID cards - https://news.ycombinator.com/item?id=41312975
-Application Protocol Data Unit (APDU) - https://www.cardlogix.com/glossary/apdu-application-protocol-data-unit-smart-card/
-What is RFID technology? - https://idesco.fi/home/about-us/what-is-rfid-technology/
-RFID and NFC difference - https://iotjourney.orange.com/en/support/faq/what-is-the-difference-between-nfc-and-rfid
+- RFID takaportin artikkeli - https://www.securityweek.com/major-backdoor-in-millions-of-rfid-cards-allows-instant-cloning/
+- Backdoor in RFID cards - https://news.ycombinator.com/item?id=41312975
+- Application Protocol Data Unit (APDU) - https://www.cardlogix.com/glossary/apdu-application-protocol-data-unit-smart-card/
+- What is RFID technology? - https://idesco.fi/home/about-us/what-is-rfid-technology/
+- RFID and NFC difference - https://iotjourney.orange.com/en/support/faq/what-is-the-difference-between-nfc-and-rfid
