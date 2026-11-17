@@ -104,4 +104,16 @@ h1 hping3 -S -p 8080 -c 100 10.10.X.X
 
 - Tällaisellä komennolla lähdin sitten paketteja kohti kohdetta eli host 2 pystyttämää palvelinta.
 - Tuossa siis **-S** on TCP-SYN flag, porttina 8080, **-c** argumentilla voidaan valita paljonko paketteja niin otin 100. Sitten kohde ip-osoite.
-- Toki nyt ei tuolla 100 paketilla se host palvelin kaatunut mutta tämä oli hyvä kokeilla. 
+- Toki nyt ei tuolla 100 paketilla se host palvelin kaatunut mutta tämä oli hyvä kokeilla.
+
+
+# Lähteet
+
+- https://github.com/santhisenan/SDN_DDoS_Simulation - DDoS simulaatio
+- Moodle
+- https://github.com/ssam246/Network-Security-Lab - Security lab
+- https://www.cloudflare.com/learning/ddos/glossary/denial-of-service/ - Denial of service
+- Claude tekoäly
+- https://www.azion.com/en/learning/ddos/what-is-smurf-attack/ - TCMP Spoof hyökkäys
+- https://www.sciencedirect.com/topics/computer-science/session-hijacking - Session hijacking
+- https://www.youtube.com/watch?v=cZ-7R8juECk - ARP middle-man attack
