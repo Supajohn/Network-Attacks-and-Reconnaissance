@@ -42,14 +42,66 @@ sshesame -port 22 -listen_address 0.0.0.0
 - Joten siellä ilmenee **failed to establish ssh connection ja se estää hyökkäyksen. Korjaan asian ohjeiden mukaan eli **ssh-keygen -R h2** komennolla node h1 komentoriville.
 
 - Tämän jälkeen ajetaan uusiksi ja onnistuu ARP-hyökkäys.
-<img width="1576" height="566" alt="image" src="https://github.com/user-attachments/assets/f08ae4ab-7570-4382-a751-164ea3e8fb80" />
+<img
+  width="1576" height="566" alt="image" src="https://github.com/user-attachments/assets/f08ae4ab-7570-4382-a751-164ea3e8fb80" />
 
 
 ## b) Samassa hakemistossa on myös ICMP Spoofing ja TCP Session Hijacking. Aja molemmat labrat läpi ja kerro, miten molemmat tekniikat toimivat.
 
-- 4
+- Tässä ensimmäisenä teen TCMP spoofing tehtävän ja aloittamalla kloonasin tuon annetun annetun repositoryn.
+````
+git clone https://github.com/ssam246/Network-Security-Lab#
+````
+
+- Sen jälkeen lähdin käynnistämään python tiedostoa jotta voidaan minineti:llä tutkia scriptejä.
+````
+sudo python3 hub_topo.py
+````
+- Tämän jälkeen avasin **xterm** komennolla nodet h1 ja h2 ja annoin ohjeiden mukaiset tiedot eli sniff pythoni ja pingataan toisessa.
+
+````
+h1 pyhton sniff_icmp.py
+h2 ping 10.0.0.1
+````
+- Ja se kyllä onnistuu.
+
+<img width="827" height="612" alt="image" src="https://github.com/user-attachments/assets/847456d8-b6c8-4d4f-9c97-70a0a4dff806" />
+
+- Eli tässä lyhkäisyydessään siis hyökkääjä muodostaa paketin jonka lähettää, mutta siinä paketissa hyökkääjän ip-osoite on **väärennettynä**. Sitten kohdekoneessa paketti ei voi olla varma tämän lähettäjän henkilöllisyydessä.
+
+
+** TCP Session Hijacking** ajoin eri nodeissa h1, h2 ja h3 eri omat komentonsa ohjeiden mukaisesti.
+- Tässä seurasin kyllä ohjeita mutta en oikein saanut selvää.
+<img width="1255" height="502" alt="image" src="https://github.com/user-attachments/assets/064e1121-8aa5-4b68-a807-3e622e2a6a76" />
+
+- Ajoin jokaisen nodessa omat komentonsa mutta se ei tuottanut mitään. Joten jäin hieman hämmentyneeksi tämän tehtävän suhteen.
 
 
 ## c) Hakemistossa 02-SDN-DDos_Simulation tryout-kansiossa on työkalut, jotta voit ajaa TCP SYN-Flood-hyökkäyksen turvallisesti. Kirjoita, miten ajoit hyökkäyksen ja miten kyseinen hyökkäys toimii.
 
-- k
+- Eli koitetaan luoda DoS eli Denial of Service hyökkäys. Eli hyökkääjä lähettää paljon avoimia paketteja jotka ruuhkauttavat ja kuormituttaa palvelimen. Isoin vahinkona on siis palvelimen kaatuminen tai ainakin varmasti hidastuminen.
+
+- Lähdin tässä hieman tekoälyn voimin Claude AI:lta. Kyseessä on siis simppeli http pakettien lähettäminen.
+- Aloitin luomalla virtuaalisen verkko ympäristön ja sen sai suoraan komennolla. Tämä luo siis yhden avoimen kytkimen ja 3 kpl hosteja sekä verkon joka yhdistää kaiken.
+
+````
+sudo mn --topo single,3 --mac --switch ovsk --controller 
+````
+<img width="946" height="307" alt="image" src="https://github.com/user-attachments/assets/6a1a878a-bedb-4882-a08d-7f430a8d3237" />
+
+- Valitsin host 2 olevan tämä "uhri" eli kenelle pystytin TCP-palvelimen komennolla. Ja vielä pyörimään taustalle.
+````
+h2 python3 -m http.server 8080 &
+````
+<img width="380" height="22" alt="image" src="https://github.com/user-attachments/assets/c39a9c41-acab-499e-bd15-6b9de2310b5c" />
+
+
+- Sitten latasin tällaisen **hping3** komennon joka siis simuloi TCP pakettien lähettämistä. Eli pystyy generoimaan sen lähettämiseen tarvittavat paketit.
+````
+h1 hping3 -S -p 8080 -c 100 10.10.X.X
+````
+<img width="622" height="35" alt="image" src="https://github.com/user-attachments/assets/359e6705-f10f-4ba6-9b75-0ff93abaafe2" />
+
+- Tällaisellä komennolla lähdin sitten paketteja kohti kohdetta eli host 2 pystyttämää palvelinta.
+- Tuossa siis **-S** on TCP-SYN flag, porttina 8080, **-c** argumentilla voidaan valita paljonko paketteja niin otin 100. Sitten kohde ip-osoite.
+- Toki nyt ei tuolla 100 paketilla se host palvelin kaatunut mutta tämä oli hyvä kokeilla. 
