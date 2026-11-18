@@ -1,2 +1,4 @@
 # Network-Attacks-and-Reconnaissance
 Haaga-Helia course about Network Attacks and Reconnaissance
+
+My personal tasks of the course.
